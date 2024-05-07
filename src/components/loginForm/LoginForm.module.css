@@ -17,7 +17,7 @@
   .form-input-login {
     padding: 6px 10px;
     margin: 0 0 10px 0;
-    border: 2px solid rgb(113, 152, 118);
+    border: 2px solid rgb(119, 113, 152);
     border-radius: 6px;
     width: 330px;
   }
@@ -25,7 +25,7 @@
   .form-input-login:focus,
   .form-input-login:active {
     border: 2px solid #fff;
-    background-color: rgb(141, 241, 59);
+    background-color: rgb(176, 238, 238);
   }
   
   .login-button {

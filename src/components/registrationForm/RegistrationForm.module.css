@@ -17,7 +17,7 @@
   .form-input-register {
     padding: 6px 10px;
     margin: 0 0 10px 0;
-    border: 2px solid rgb(113, 152, 113);
+    border: 2px solid rgb(0, 4, 224);
     border-radius: 6px;
     width: 330px;
   }
@@ -25,7 +25,7 @@
   .form-input-register:focus,
   .form-input-register:active {
     border: 2px solid #fff;
-    background-color: rgb(141, 241, 59);
+    background-color: rgb(176, 238, 238);
   }
   
   .register-button {
