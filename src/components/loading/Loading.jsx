@@ -1,4 +1,4 @@
-import { Circles } from "react-loader-spinner";
+import { Circles } from "loader";
 
 const loaderStyle = {
   display: "flex",
