@@ -14,14 +14,14 @@ const ContactsPage = lazy(() =>
   import("../../pages/contactsPage/contactsPage.jsx")
 );
 
-import { RefreshUser } from "../../redux/auth/operations.js";
+import { RefreshUser } from "../../redux/authorisation/operations.js";
 import {
   selectIsLoggedIn,
   selectIsRefreshing,
-} from "../../redux/auth/selectors.js";
-import { PrivateRoute } from "./privateRoute.jsx";
-import { RestrictedRoute } from "./restrictedRoute.jsx";
-import { Loading } from "../loading/loading.jsx";
+} from "../../redux/authorisation/selectors.js";
+import { PrivateRoute } from "./PrivateRoute.jsx";
+import { RestrictedRoute } from "./RestrictedRoute.jsx";
+import { Loading } from "../loading/Loading.jsx";
 
 function App() {
   const dispatch = useDispatch();
