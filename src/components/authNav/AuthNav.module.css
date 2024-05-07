@@ -1,0 +1,17 @@
+.header-authnav-text {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .header-authnav-text:hover {
+    color: rgb(113, 152, 123);
+  }
+  
+  .header-nav-text-register,
+  .header-nav-text-login {
+    float: right;
+  }
+  
+  .header-nav-text-login {
+    padding: 0 30px 0 0;
+  }

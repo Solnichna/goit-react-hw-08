@@ -1,0 +1,7 @@
+.header-container {
+    font-size: x-large;
+    font-weight: 600;
+    border-bottom: 3px solid rgb(114, 152, 113);
+    padding: 10px 15px;
+    margin: 0 20px;
+  }
