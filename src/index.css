@@ -1,32 +1,37 @@
-@import url("./components/contactForm/ContactForm.module.css");
-@import url("./components/contactList/ContactList.module.css");
-@import url("./components/searchBox/SearchBox.module.css");
-@import url("./components/contact/Contact.module.css");
+@import url("../contactList/contactList.module.css");
+@import url("../contactForm/contactForm.module.css");
+@import url("../searchBox/searchBox.module.css");
+@import url("../contact/contact.module.css");
+@import url("../error/error.module.css");
+@import url("../appBar/appBar.module.css");
+@import url("../navigation/navigation.module.css");
+@import url("../loginForm/loginForm.module.css");
+@import url("../registrationForm/registrationForm.nodule.css");
+@import url("../../pages/homePage/homePage.module.css");
+@import url("../authNav/authNav.module.css");
+@import url("../userMenu/userMenu.module.css");
 
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  background-color: rgb(153, 210, 236);
-  display: flex;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-ul,
-ol {
   margin: 0;
   padding: 0;
+  background-color: rgb(141, 241, 59);
 }
 
-img {
-  display: block;
-  max-width: 100%;
+li {
+  list-style: none;
+}
+
+button {
+  font-weight: 600;
+  border: 2px solid rgb(113, 152, 125);
+  border-radius: 10px;
+  color: rgb(114, 152, 113);
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+button:hover {
+  border: 2px solid #fff;
+  color: #111;
+  background-color: rgb(141, 241, 59);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
