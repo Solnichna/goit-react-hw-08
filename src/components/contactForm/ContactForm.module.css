@@ -1,25 +1,43 @@
+.container-contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-book-text {
+  text-align: center;
+}
+
 .contact-form {
-  border: 3px solid #124904;
+  border: 2px solid rgb(113, 152, 115);
+  background-color: rgb(141, 241, 59);
   border-radius: 5px;
-  margin: 7px;
+  margin: 7px 30px;
   padding: 15px 10px 15px 10px;
-  width: 200px;
+  width: 330px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.form {
-  background-color:rgb(40, 233, 240);
-  color: aliceblue;
+
+.form-input {
+  padding: 6px 10px;
+  margin: 0 0 10px 0;
+  border: 2px solid rgb(113, 152, 116);
+  border-radius: 6px;
 }
+.form-input:hover,
+.form-input:focus,
+.form-input:active {
+  border: 2px solid #fff;
+  background-color: rgb(141, 241, 59);
+}
+
 .button-add-contact {
   width: 100px;
   padding: 5px;
-  background-color:rgb(18, 18, 177);
-  border-radius: 7px;
-  color: aliceblue;
 }
 
-.error-form {
+.error-message-form {
   color: red;
+  margin: -8px 0 10px 0;
 }

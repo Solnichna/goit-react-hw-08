@@ -1,0 +1,8 @@
+.container-error {
+    padding: 10px 0 0 0;
+    color: red;
+    margin-bottom: 40px;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+  }

@@ -1,65 +1,88 @@
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { v4 as uuidv4 } from "uuid";
+import { useDispatch } from "react-redux";
+import { addContactsThunk } from "../../redux/contacts/contactsOps";
 
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import { nanoid } from 'nanoid';
-
-import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps'; 
-
-const ContactForm = () => {
-  const dispatch = useDispatch();
-
-  const initialValues = {
-    name: '',
-    number: ''
-  };
-
-  const validationSchema = Yup.object().shape({
-    name: Yup.string()
-      .required('Name is required')
-      .min(3, 'Name must be at least 3 characters')
-      .max(50, 'Name must be at most 50 characters'),
-    number: Yup.string()
-      .required('Number is required')
-  });
-
-  const onSubmit = (values, { resetForm }) => {
-    const newContact = {
-      id: nanoid(),
-      name: values.name,
-      number: values.number
-    };
-    dispatch(addContact(newContact)); 
-    resetForm();
-  };
-
-  return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {({ isSubmitting }) => (
-        <Form className="contact-form">
-          <div>
-            <p>Name</p>
-            <Field className="form" type="text" name="name" placeholder="Name" />
-            <ErrorMessage name="name" component="div" />
-          </div>
-          <div>
-            <p>Number</p>
-            <Field className="form" type="text" name="number" placeholder="Number" />
-            <ErrorMessage name="number" component="div" className="error-form"/>
-          </div>
-          <button type="submit" className="button-add-contact" disabled={isSubmitting}>
-            {isSubmitting ? 'Adding...' : 'Add Contact'}
-          </button>
-        </Form>
-      )}
-    </Formik>
-  );
+const initialValues = {
+  name: "",
+  number: "",
 };
 
-export default ContactForm;
+export const ContactForm = () => {
+  const dispatch = useDispatch();
+  const nameId = uuidv4();
+  const numberId = uuidv4();
 
+  const handleSumbit = (values, actions) => {
+    const newContact = {
+      ...values,
+      id: uuidv4(),
+      name: values.name.trim(),
+    };
 
+    dispatch(addContactsThunk(newContact));
+
+    actions.resetForm();
+  };
+
+  const FormSchema = Yup.object().shape({
+    name: Yup.string()
+      .trim()
+      .min(3, "Too Short!")
+      .max(50, "Too Long!")
+      .required(),
+    number: Yup.string()
+      .trim()
+      .min(1, "Too Short!")
+      .max(20, "Too Long!")
+      .required(),
+  });
+
+  return (
+    <>
+      <h1 className="phone-book-text">Phonebook</h1>
+
+      <div className="container-contact-form">
+        <Formik
+          initialValues={initialValues}
+          onSubmit={handleSumbit}
+          validationSchema={FormSchema}
+        >
+          <Form className="contact-form">
+            <label htmlFor={nameId}>Name:</label>
+            <Field
+              type="text"
+              name="name"
+              id={nameId}
+              className="form-input"
+              placeholder="Name"
+            />
+            <ErrorMessage
+              className="error-message-form"
+              name="name"
+              component="p"
+            />
+            <label htmlFor={numberId}>Number:</label>
+            <Field
+              type="number"
+              name="number"
+              id={numberId}
+              className="form-input"
+              placeholder="Number"
+            />
+            <ErrorMessage
+              className="error-message-form"
+              name="number"
+              component="p"
+            />
+
+            <button type="submit" className="button-add-contact">
+              Add contant
+            </button>
+          </Form>
+        </Formik>
+      </div>
+    </>
+  );
+};
