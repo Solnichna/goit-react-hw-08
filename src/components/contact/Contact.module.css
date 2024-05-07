@@ -4,11 +4,11 @@
 }
 
 .contacts {
-  border: 2px solid rgb(113, 152, 119);
-  border-radius: 5px;
+  border: 2px solid rgb(27, 0, 177);
+  border-radius: 6px;
   padding: 0 10px 0 10px;
   width: 285px;
-  background-color: rgb(206, 231, 185);
+  background-color: rgb(176, 238, 238);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .contact-container:not(:last-child) {

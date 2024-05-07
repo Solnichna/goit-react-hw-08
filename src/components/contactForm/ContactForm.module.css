@@ -22,14 +22,14 @@
 .form-input {
   padding: 6px 10px;
   margin: 0 0 10px 0;
-  border: 2px solid rgb(113, 152, 116);
+  border: 2px solid rgb(27, 0, 177);
   border-radius: 6px;
 }
 .form-input:hover,
 .form-input:focus,
 .form-input:active {
   border: 2px solid #fff;
-  background-color: rgb(141, 241, 59);
+  background-color: rgb(76, 73, 236);
 }
 
 .button-add-contact {
@@ -38,6 +38,6 @@
 }
 
 .error-message-form {
-  color: red;
+  color: rgb(153, 0, 0);
   margin: -8px 0 10px 0;
 }
