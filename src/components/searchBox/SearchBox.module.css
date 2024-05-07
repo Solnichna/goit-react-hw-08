@@ -7,12 +7,12 @@
 .search-box-input {
   width: 290px;
   padding: 5px;
-  border: 2px solid rgb(152, 135, 113);
+  border: 2px solid rgb(13, 0, 196);
   border-radius: 5px;
 }
 .search-box-input:hover,
 .search-box-input:focus,
 .search-box-input:active {
   border: 2px solid #fff;
-  background-color: antiquewhite;
+  background-color: rgb(176, 238, 238);
 }
