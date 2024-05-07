@@ -14,11 +14,11 @@ const ContactsPage = lazy(() =>
   import("../../pages/contactsPage/contactsPage.jsx")
 );
 
-import { RefreshUser } from "../../redux/authorisation/operations.js";
+import { RefreshUser } from "../../redux/auth/operations.js";
 import {
   selectIsLoggedIn,
   selectIsRefreshing,
-} from "../../redux/authorisation/selectors.js";
+} from "../../redux/auth/selectors.js";
 import { PrivateRoute } from "./PrivateRoute.jsx";
 import { RestrictedRoute } from "./RestrictedRoute.jsx";
 import { Loading } from "../loading/Loading.jsx";

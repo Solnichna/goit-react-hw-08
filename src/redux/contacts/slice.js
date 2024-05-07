@@ -3,10 +3,10 @@ import {
   fetchContactsThunk,
   addContactsThunk,
   removeContactsThunk,
-} from "./contactsOps.js";
+} from "./operation.js";
 
-import { selectNameFilter } from "../filters/filtersSlice.js";
-import { selectNumberFilter } from "../filters/filtersSlice.js";
+import { selectNameFilter } from "../filters/slice.js";
+import { selectNumberFilter } from "../filters/slice.js";
 
 const initialState = {
   contacts: {

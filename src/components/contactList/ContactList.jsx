@@ -1,10 +1,10 @@
 import { Contact } from "../contact/Contact.jsx";
 import { useSelector } from "react-redux";
-import { selectFilteredContacts } from "../../redux/contacts/contactsSlice.js";
+import { selectFilteredContacts } from "../../redux/contacts/slice.js";
 
 export const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
-  
+
   return (
     <ul className="contact-list">
       {filteredContacts.length > 0 ? (
