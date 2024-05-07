@@ -1,15 +1,15 @@
-@import url("../contactList/contactList.module.css");
-@import url("../contactForm/contactForm.module.css");
-@import url("../searchBox/searchBox.module.css");
-@import url("../contact/contact.module.css");
-@import url("../error/error.module.css");
-@import url("../appBar/appBar.module.css");
-@import url("../navigation/navigation.module.css");
-@import url("../loginForm/loginForm.module.css");
-@import url("../registrationForm/registrationForm.nodule.css");
+@import url("../contactList/ContactList.module.css");
+@import url("../contactForm/ContactForm.module.css");
+@import url("../searchBox/SearchBox.module.css");
+@import url("../contact/Contact.module.css");
+@import url("../error/Error.module.css");
+@import url("../appBar/AppBar.module.css");
+@import url("../navigation/Navigation.module.css");
+@import url("../loginForm/LoginForm.module.css");
+@import url("../registrationForm/RegistrationForm.module.css");
 @import url("../../pages/homePage/homePage.module.css");
-@import url("../authNav/authNav.module.css");
-@import url("../userMenu/userMenu.module.css");
+@import url("../authNav/AuthNav.module.css");
+@import url("../userMenu/UserMenu.module.css");
 
 body {
   margin: 0;
