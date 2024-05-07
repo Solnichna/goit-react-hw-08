@@ -3,7 +3,7 @@ import {
   fetchContactsThunk,
   addContactsThunk,
   removeContactsThunk,
-} from "./operation.js";
+} from "./operations.js";
 
 import { selectNameFilter } from "../filters/slice.js";
 import { selectNumberFilter } from "../filters/slice.js";

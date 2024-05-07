@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { v4 as uuidv4 } from "uuid";
 import { useDispatch } from "react-redux";
-import { addContactsThunk } from "../../redux/contacts/operation.js";
+import { addContactsThunk } from "../../redux/contacts/operations.js";
 
 const initialValues = {
   name: "",
