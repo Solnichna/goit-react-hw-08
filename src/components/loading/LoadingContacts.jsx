@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "react-loader-spinner";
+import { MagnifyingGlass } from "spinner";
 
 export const LoadingContacts = () => {
   return (
