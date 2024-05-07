@@ -1,0 +1,11 @@
+.header-nav-text {
+    text-decoration: none;
+    color: black;
+  }
+  .header-nav-text:hover {
+    color: rgb(113, 152, 115);
+  }
+  
+  .header-nav-text-contacts {
+    padding-left: 25px;
+  }

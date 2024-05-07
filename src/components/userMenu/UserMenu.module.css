@@ -1,0 +1,13 @@
+.container-user {
+    float: right;
+    display: flex;
+  }
+  
+  .user-name {
+    margin: 0;
+    padding-right: 5px;
+  }
+  
+  .logout-button {
+    padding: 5px 8px;
+  }

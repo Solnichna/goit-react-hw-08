@@ -1,12 +1,18 @@
-.search-box {
-    margin: 7px;
-    padding: 20px 0;
-  }
-  
-  .search-box-input {
-    width: 290px;
-    padding: 5px;
-    border-radius: 3px;
-    background-color:rgb(40, 233, 240);
-    color: aliceblue;
-  }
+.search-box-container {
+  margin: 7px 25px;
+  padding: 20px 28px;
+  text-align: center;
+}
+
+.search-box-input {
+  width: 290px;
+  padding: 5px;
+  border: 2px solid rgb(152, 135, 113);
+  border-radius: 5px;
+}
+.search-box-input:hover,
+.search-box-input:focus,
+.search-box-input:active {
+  border: 2px solid #fff;
+  background-color: antiquewhite;
+}
