@@ -1,15 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  contacts: {
-    items: [],
-    loading: false,
-    error: null,
-  },
-  filters: {
-    name: "",
-    number: "",
-  },
+  name: "",
+  number: "",
 };
 
 const filterContact = createSlice({
@@ -17,18 +10,17 @@ const filterContact = createSlice({
   initialState,
   reducers: {
     changeFilterName: (state, action) => {
-      state.filters.name = action.payload;
+      state.name = action.payload;
     },
     changeFilterNumber: (state, action) => {
-      state.filters.number = action.payload;
+      state.number = action.payload;
     },
   },
 });
 
-export const { changeFilterName } = filterContact.actions;
-export const { changeFilterNumber } = filterContact.actions;
+export const { changeFilterName, changeFilterNumber } = filterContact.actions;
 
 export const filterReducer = filterContact.reducer;
 
-export const selectNameFilter = (state) => state.filters.filters.name;
-export const selectNumberFilter = (state) => state.filters.filters.number;
+export const selectNameFilter = (state) => state.filters.name;
+export const selectNumberFilter = (state) => state.filters.number;

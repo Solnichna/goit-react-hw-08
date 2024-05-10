@@ -5,8 +5,7 @@ import {
   removeContactsThunk,
 } from "./operations.js";
 
-import { selectNameFilter } from "../filters/slice.js";
-import { selectNumberFilter } from "../filters/slice.js";
+import { selectNameFilter, selectNumberFilter } from "../filters/slice.js";
 
 const initialState = {
   contacts: {
@@ -20,43 +19,40 @@ const initialState = {
 };
 
 const isPending = (action) =>
-  typeof action.type === "string" && action.type.endsWith("/pendding");
+  typeof action.type === "string" && action.type.endsWith("/pending");
 const isRejected = (action) =>
   typeof action.type === "string" && action.type.endsWith("/rejected");
 
 const pendingReducer = (state) => {
-  state.loading = true;
-  state.error = null;
+  state.contacts.loading = true;
+  state.contacts.error = null;
 };
 
 export const contactSlice = createSlice({
   name: "contacts",
   initialState,
-
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchContactsThunk.fulfilled, (state, action) => {
-        state.loading = false;
-        state.error = null;
-        state.items = action.payload;
+        state.contacts.loading = false;
+        state.contacts.error = null;
+        state.contacts.items = action.payload;
       })
-
       .addCase(addContactsThunk.fulfilled, (state, action) => {
-        state.loading = false;
-        state.error = null;
-        state.items.push(action.payload);
+        state.contacts.loading = false;
+        state.contacts.error = null;
+        state.contacts.items.push(action.payload);
       })
-
       .addCase(removeContactsThunk.fulfilled, (state, action) => {
-        state.loading = false;
-        state.error = null;
-        state.items = action.payload;
+        state.contacts.loading = false;
+        state.contacts.error = null;
+        state.contacts.items = action.payload;
       })
-
       .addMatcher(isPending, pendingReducer)
       .addMatcher(isRejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
+        state.contacts.loading = false;
+        state.contacts.error = action.payload;
       });
   },
 });

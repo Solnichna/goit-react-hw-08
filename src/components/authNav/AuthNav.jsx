@@ -13,7 +13,7 @@ export const AuthNav = () => {
         to="/login"
         className="header-authnav-text header-nav-text-login"
       >
-        Log In
+        Log in
       </NavLink>
     </>
   );
