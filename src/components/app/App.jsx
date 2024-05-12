@@ -21,7 +21,6 @@ import {
 } from "../../redux/auth/selectors.js";
 import { PrivateRoute } from "./PrivateRoute.jsx";
 import { RestrictedRoute } from "./RestrictedRoute.jsx";
-import { Loading } from "../loading/Loading.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,7 +32,7 @@ function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <Loading />
+    <p>load</p>
   ) : (
     <>
       <Layout>
