@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ContactForm } from "../../components/contactForm/ContactForm.jsx";
 import { SearchBox } from "../../components/searchBox/SearchBox.jsx";
 import { ContactList } from "../../components/contactList/ContactList.jsx";
-import { LoadingContacts } from "../../components/loading/LoadingContacts.jsx";
+
 import { Error } from "../../components/error/Error.jsx";
 
 import { fetchContactsThunk } from "../../redux/contacts/operations.js";
@@ -22,7 +22,7 @@ export const ContactsPage = () => {
     <>
       <ContactForm />
       <SearchBox />
-      {loading && <LoadingContacts />}
+      {loading && <p>load</p>}
       {error && <Error />}
       {items && <ContactList />}
     </>
