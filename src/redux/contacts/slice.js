@@ -3,6 +3,7 @@ import {
   fetchContactsThunk,
   addContactsThunk,
   removeContactsThunk,
+  logOut,
 } from "./operations.js";
 
 import { selectNameFilter, selectNumberFilter } from "../filters/slice.js";
@@ -48,6 +49,11 @@ export const contactSlice = createSlice({
         state.contacts.loading = false;
         state.contacts.error = null;
         state.contacts.items = action.payload;
+      })
+      .addCase(logOut.fulfilled, (state) => {
+        state.contacts.items = [];
+        state.contacts.loading = false;
+        state.contacts.error = null;
       })
       .addMatcher(isPending, pendingReducer)
       .addMatcher(isRejected, (state, action) => {

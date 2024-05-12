@@ -1,13 +1,11 @@
+import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import axios from "axios";
-
 export const fetchContactsThunk = createAsyncThunk(
-  "contacts/featchAll",
+  "contacts/fetchAll",
   async (_, thunkApi) => {
     try {
       const res = await axios.get("/contacts");
-    
       return res.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -33,9 +31,20 @@ export const removeContactsThunk = createAsyncThunk(
     try {
       await axios.delete(`/contacts/${contactId}`);
       const res = await axios.get(`/contacts`);
-
       console.log(res.data);
       return res.data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const logOut = createAsyncThunk(
+  "auth/logOut",
+  async (_, thunkApi) => {
+    try {
+      await axios.post("/logout");
+      
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }
