@@ -86,3 +86,5 @@ export const selectFilteredContacts = createSelector(
     return filteredContacts;
   }
 );
+
+console.log(selectFilteredContacts);

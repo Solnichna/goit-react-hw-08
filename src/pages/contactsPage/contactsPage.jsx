@@ -12,7 +12,7 @@ import { fetchContactsThunk } from "../../redux/contacts/operations.js";
 export const ContactsPage = () => {
   const dispatch = useDispatch();
 
-  const { loading, error, items } = useSelector((state) => state.contacts);
+  const { loading, error, items } = useSelector((state) => state.contacts.contacts);
 
   useEffect(() => {
     dispatch(fetchContactsThunk());
