@@ -66,7 +66,7 @@ export const contactSlice = createSlice({
 export const contactReducer = contactSlice.reducer;
 
 export const selectFilteredContacts = createSelector(
-  [state => state.contacts.items, selectNameFilter, selectNumberFilter],
+  [state => state.contacts.contacts.items, selectNameFilter, selectNumberFilter],
   (contacts, filterName, filterNumber) => {
     if (!filterName && !filterNumber) return contacts;
 
